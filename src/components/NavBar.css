@@ -1,0 +1,34 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+.navbar a.active {
+    color: #ffa500;
+    font-weight: bold;
+    border-bottom: 2px solid orange;
+}
+
+.navbar button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffa500;
+    color: white;
+}
+
+.navbar button:hover {
+    background-color: #005fcc;
+}
