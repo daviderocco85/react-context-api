@@ -5,7 +5,6 @@
     gap: 0.5rem;
 }
 
-
 .navbar a {
     color: white;
     font-size: 1.4rem;
@@ -19,17 +18,29 @@
     border-bottom: 2px solid orange;
 }
 
-.navbar button {
-    padding: 0.6rem 1.2rem;
+.navbar input[type="number"] {
+    width: 250px;
+    padding: 0.5rem 0.8rem;
     font-size: 1rem;
     font-weight: bold;
+    border: 2px solid #ffa500;
     border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    background-color: #ffa500;
-    color: white;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.2s ease-in-out;
 }
 
-.navbar button:hover {
-    background-color: #005fcc;
+.navbar input[type="number"]:focus {
+    border-color: #ff7b00;
+    box-shadow: 0 0 4px rgba(255, 165, 0, 0.6);
+}
+
+.navbar input[type="number"]::placeholder {
+    color: #999;
+    font-weight: normal;
+}
+
+.navbar input[type="number"]:hover {
+    border-color: #ff7b00;
 }
