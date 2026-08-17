@@ -52,7 +52,7 @@ export const ProductDetail = () => {
 
             <p>{product.description}</p>
             <p><strong>Categoria:</strong> {product.category}</p>
-            <p><strong>Prezzo:</strong> ${product.price}</p>
+            <p><strong>Prezzo:</strong> {product.price} €</p>
 
             <div className="nav-buttons">
                 <button onClick={goPrev} disabled={currentId === 1}>
