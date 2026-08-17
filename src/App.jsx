@@ -6,19 +6,22 @@ import { AboutUs } from './pages/AboutUs';
 import { Products } from './pages/Products';
 import { ProductDetail } from './pages/products/ProductDetail';
 import { NotFound } from './pages/NotFound';
+import { BudgetContext, BudgetProvider } from './context/BudgetContext';
 
 export const App = () => {
 
   return (
-    <Routes>
-      <Route element={<ShellLayout />}>
-        <Route index element={<Home />} />
-        <Route path='about-us' element={<AboutUs />} />
-        <Route path='products' element={<Products />} />
-        <Route path="products/:id" element={<ProductDetail />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
+    <BudgetProvider>
+      <Routes>
+        <Route element={<ShellLayout />}>
+          <Route index element={<Home />} />
+          <Route path='about-us' element={<AboutUs />} />
+          <Route path='products' element={<Products />} />
+          <Route path="products/:id" element={<ProductDetail />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BudgetProvider>
   );
 };
 
