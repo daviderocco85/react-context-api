@@ -7,6 +7,7 @@ export const Navbar = () => {
     const { budgetMode, setBudgetMode } = useContext(BudgetContext);
 
     return (
+
         <nav className="navbar">
             <NavLink to='/'>Homepage</NavLink>
             <NavLink to='/about-us'>Chi siamo</NavLink>
