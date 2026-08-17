@@ -7,15 +7,16 @@ import axios from "axios";
 
 export const Products = () => {
     const [products, setProducts] = useState([]);
-    const { budgetMode } = useContext(BudgetContext);
+    const { maxPrice } = useContext(BudgetContext);
 
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products")
             .then(res => setProducts(res.data));
     }, []);
 
-    const filteredProducts = budgetMode
-        ? products.filter(product => product.price <= 30)
+
+    const filteredProducts = maxPrice
+        ? products.filter(product => product.price <= maxPrice)
         : products;
 
     return (
